@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "ReactiveViewModel"
-  s.version      = "0.4.0"
+  s.version      = "0.5.0"
   s.summary      = "Model-View-ViewModel, using ReactiveCocoa."
   s.description  = <<-DESC
     ReactiveViewModel is a combination code/documentation project for building Cocoa applications using Model-View-ViewModel and ReactiveCocoa.
@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/moovel/ReactiveViewModel.git", :tag => "#{s.version}" }
   s.source_files = 'ReactiveViewModel/*.{h,m}'
   s.requires_arc = true
-  s.dependency   'ReactiveCocoa', '~> 4.2.1'
+  s.dependency   'ReactiveCocoa', '~> 5.0.0'
   s.prepare_command = <<-'END'
     find . \( -regex '.*EXT.*\.[mh]$' -o -regex '.*metamacros\.[mh]$' \) -execdir mv {} RAC{} \;
     find . -regex '.*\.[hm]' -exec sed -i '' -E 's@"(EXT.*|metamacros)\.h"@"RAC\1.h"@' {} \;
